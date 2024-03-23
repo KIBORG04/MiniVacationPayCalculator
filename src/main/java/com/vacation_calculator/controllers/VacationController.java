@@ -22,7 +22,7 @@ public class VacationController {
      * @param vacationDays Количество отпускных дней
      */
     @GetMapping("/calculate")
-    public ResponseEntity<String> CalculateVacation(
+    public ResponseEntity<String> CalculateVacationPay(
             @RequestParam(value = "salary") int salary,
             @RequestParam(value = "days", required = false) int vacationDays
     ) {
@@ -35,7 +35,7 @@ public class VacationController {
      * @param vacationEnd Дата окончания отпуска
      */
     @GetMapping("/calculate_by_date")
-    public ResponseEntity<String> CalculateVacationByDates(
+    public ResponseEntity<String> CalculateVacationPayByDates(
             @RequestParam(value = "salary") int salary,
             @RequestParam(value = "vacationStart") LocalDate vacationStart,
             @RequestParam(value = "vacationEnd") LocalDate vacationEnd
