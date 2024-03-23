@@ -11,7 +11,6 @@ import java.time.LocalDate;
 
 @RestController
 public class VacationController {
-
     public VacationPayService vacationPayService;
 
     public VacationController( @Autowired VacationPayService vacationPayService) {
